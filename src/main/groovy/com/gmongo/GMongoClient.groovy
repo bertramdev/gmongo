@@ -49,7 +49,7 @@ class GMongoClient extends GMongo {
   }
 
   GMongoClient(ServerAddress addr, MongoClientOptions options) {
-    this.mongo = new MongoClient(addr, new MongoOptions(options));
+    this.mongo = new MongoClient(addr, options);
   }
 
   GMongoClient(List<ServerAddress> seeds) {
@@ -65,7 +65,7 @@ class GMongoClient extends GMongo {
   }
 
   GMongoClient(List<ServerAddress> seeds, MongoClientOptions options) {
-    this.mongo = new MongoClient(seeds, new MongoOptions(options));
+    this.mongo = new MongoClient(seeds, options);
   }
 
   GMongoClient(MongoClientURI uri) {
